@@ -14,7 +14,15 @@ class Car{
         DoorKind backseatDoors;
         uint8_t seatCount;
     public:
-        Car();
+        Car(){
+            manufacturer="";
+            model="";
+            zeroToSixtyNs=0;
+            headonDragCoeff=0.0;
+            horsepower=0;
+            backseatDoors= null;
+            seatCount=0;
+        };
         Car(char const* const manufacturerName, char const* const modelName, PerformanceStats perf, uint8_t numSeats, DoorKind backseatDoorDesign);
         Car(Car const& o);
         Car& operator=(Car const& o);
